@@ -1,0 +1,9 @@
+place,gdp_pc_pp,pop,share1_ref,share1,shew,plgp,unemp,axfin_p,axfin_r,axhealth,social_p,social_r,iso3,pov_head,avg_prod_k,faref,fa,pe,peref,H,alpha,T_rebuild_K,T_rebuild_L,pi,income_elast,v,v_s,pv,sigma_p,sigma_r,alpha,share_nat_income
+Mumbai,29380.32,18400000,0.1014,0.1014,0.07,0.6137311,0.06,0.34,0.33,0.875,0.1,0.1,MUM,0.25,0.3065,0.228,0.228,0.71,0.71,0.68,0,1.5,40,0.2,1.5,0.1,0.37229199,0.319913199,0.118,0.096,0,0.25
+Mumbai_share_.15,,,0.11,0.11,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Mumbai_sigma_0.25,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0.25,0.25,,
+Mumbai_social_p_r,,,,,,,,,,,0.25,0.25,,,,,,,,,,,,,,,,,,,,
+Mumbai_rebuild_1,,,,,,,,,,,,,,,,,,,,,,1,,,,,,,,,,
+Mumbair_fa_.09,,,,,,,,,,,,,,,,0.2166,0.2166,,,,,,,,,,,,,,,
+Mumbair_la5,,,,,,,,,,,0.05,0.05,,,,,,,,,,,,,,,,,,,,
+Mumbai_sigma_5,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0.5,0.5,,
