@@ -7,7 +7,6 @@ Natural Disasters" by Stephane Hallegatte, Mook Bangalore, and Adrien
 Vogt-Schilb. 
 It comes with no warranty at all. 
 
-
 Basic instructions: 
 
 First all, you need a copy of ipython (find instructions for this part 
@@ -16,18 +15,20 @@ python 2 without adjustments.
 
 To reproduce the figures in the paper 
 
-1-download_wb_data.ipynb gets data from ASPIRE, WDI and FINDEX 
+1-download_wb_data.ipynb gets data from ASPIRE, WDI and FINDEX. 
 2-comptue_res_ind.ipynb compiles the data and uses it to compute the 
 resilience indicator. All the equations arein another file, 
 res_ind_lib.py, and saves the results. 
 
-After that, you can use: 3-draw maps.ipynb to draw the maps 
-4-draw_plots.ipynb to draw... the plots 
+After that, you can use: 
+3-draw maps.ipynb to draw the maps. 
+4-draw_plots.ipynb to draw... the plots. 
 
 Drawing the scorecards requires 2 steps (also after steps 1 and 2): 
 5-run compute_scorecards.ipynb This basically computes the derivative of 
-risk and resilience wrt all the inputs 6-run render_scorecards.ipynb 
-This does the actual drawing 
+risk and resilience wrt all the inputs 
+6-run render_scorecards.ipynb. 
+This does the actual drawing. 
 
 
 ===============================================================
