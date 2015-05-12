@@ -42,7 +42,7 @@ def compute_resiliences(df_in,kind="exante"):
     ph = df["pov_head"]
     
     #consumption levels
-    cp=df["share1"]/ph*df["gdp_pc_pp"]
+    cp=   df["share1"] /ph    *df["gdp_pc_pp"]
     cr=(1-df["share1"])/(1-ph)*df["gdp_pc_pp"]
     C = df["gdp_pc_pp"]
 
@@ -53,32 +53,35 @@ def compute_resiliences(df_in,kind="exante"):
     far =df["far"]=(fa-ph*df.fap)/(1-ph)
 
     #vulnerabilities from total and bias
-    v=df.v
+    if kind=="exante":
+        #early-warning-adjusted vulnerability
+        v_shew=df["v"]*(1-df["pi"]*df["shew"])
+        vs_shew = df["v_s"] *(1-df["pi"]*df["shew"])
+        
+    else:
+        v_shew = df["v"]
+        vs_shew = df["v_s"]
+        
+    df["v_shew"] = v_shew
     pv=df.pv
-    df["v_p"] = v*(1+pv)
+    df["v_p"] = v_shew*(1+pv)
     
     #non poor vulnerability "protected" from exposure variations... 
-    fap_ref=df.faref*(1+df.peref)
+    fap_ref= df.faref*(1+df.peref)
     far_ref=(df.faref-ph*fap_ref)/(1-ph)
-    cp_ref=   df["share1_ref"] /ph*df["gdp_pc_pp"]
-    cr_ref=(1-df["share1_ref"])/(1-ph)*df["gdp_pc_pp"]
+    cp_ref=   df["share1_ref"] /ph
+    cr_ref=(1-df["share1_ref"])/(1-ph)
     
     x=ph*cp_ref *fap_ref    
     y=(1-ph)*cr_ref  *far_ref
     
-    df["v_r"] = ((x+y)*v - x* df["v_p"])/y
+    df["v_r"] = ((x+y)*v_shew - x* df["v_p"])/y
 
+    vp_shew = df["v_p"]
+    vr_shew = df["v_r"]
+  
     
-    if kind=="exante":
-        #early-warning-adjusted vulnerability
-        vp_shew = df["v_p"]*(1-df["pi"]*df["shew"])
-        vr_shew = df["v_r"]*(1-df["pi"]*df["shew"])
-        vs_shew = df["v_s"]*(1-df["pi"]*df["shew"])
-    else:    
-        vp_shew = df["v_p"]
-        vr_shew = df["v_r"]
-        vs_shew = df["v_s"]
-    
+
     if kind=="exante":
         # Ability and willingness to improve transfers after the disaster
         df["borrow_abi"]=(df["rating"]+df["finance_pre"])/2 
@@ -144,7 +147,7 @@ def compute_resiliences(df_in,kind="exante"):
      
     ############################
     #Reference losses
-    h=1e-2
+    h=1e-4
     wprime =(welf(df["gdp_pc_pp"]/rho+h,elast)-welf(df["gdp_pc_pp"]/rho-h,elast))/(2*h)
     dWref   = wprime*dK
     
@@ -164,6 +167,9 @@ def compute_resiliences(df_in,kind="exante"):
         proba = 1
     
     #Risk
+    
+    df["dWsurWprime"]=deltaW/wprime
+    
     df["equivalent_cost"] = proba* (dW_destitution+deltaW)/wprime
     
     df["risk"]= df["equivalent_cost"]/(df["gdp_pc_pp"]);
@@ -194,7 +200,7 @@ def calc_delta_welfare(ph,fap,far,vp,vr,v_shared,cp,cr,la_p,la_r,mu,sh_sh,gamma,
          kr*vr*far*(1-ph)
     
     # consumption losses per category of population
-    d_cur_cnp=fap*v_shared *la_p* kp *sh_sh
+    d_cur_cnp=fap*v_shared *la_p* kp *sh_sh   #v_shared does not change with v_rich so pv changes only vulnerabilities in the affected zone. 
     d_cur_cnr=far*v_shared *la_r *kr *sh_sh
     d_cur_cap=vp*(1-la_p)*kp + d_cur_cnp
     d_cur_car=vr*(1-la_r)*kr + d_cur_cnr
