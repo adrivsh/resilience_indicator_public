@@ -1,7 +1,7 @@
 key,descriptor,weight_der,lower,upper,number_type,bandwith
 gdp_pc_pp,GDP per capita (PPP USD),,,,,
 pop,Population,,,,,
-protection,Protection level (return period),1,,,simple,0.02
+protection, Hazard (return period),1,,,simple,0.02
 H,Homogeneity of damages,1,0,1,percent,0.2
 T_rebuild_K,Time to reconstruct,1,0,10,simple,0.2
 T_rebuild_L,Time to rebuild human capital,1,0,50,simple,0.2
@@ -40,9 +40,10 @@ unemp,Unemployment,1,,,percent,0.2
 v_p,Asset vulnerability (poor people),0.2,0,1,percent,0.2
 v_r,Asset vulnerability (non-poor people),0.8,0,1,percent,0.2
 v_s,Asset vulnerability (shared sector),0.8,0,1,percent,0.2
-v,  Asset vulnerability,1,0,1,percent,0.2
+v,Vulnerability without early warning,1,0,1,percent,0.2
+v_shew,Asset vulnerability,1,0,1,percent,0.2
 axfin_p,Access to finance for poor people,0.2,,,percent,0.2
 axfin_r,Access to finance for non-poor people,0.8,,,percent,0.2
 axhealth,Access to health care,1,,,percent,0.2
 resilience,Resilience,1,,,percent,0.3
-risk,Total risk,,,,risk,0.3
+risk,Risk to welfare,,,,risk,0.3

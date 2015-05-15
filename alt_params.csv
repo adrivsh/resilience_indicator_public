@@ -1,3 +1,6 @@
-alpha,-.7
-H,.65
-pi,.4
+param,value,formated_name
+alpha,-.7,\alpha
+H,.65,H
+pi,.4,\pi
+income_elast,1,\eta
+income_elast,2,\eta
