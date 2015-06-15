@@ -1,35 +1,27 @@
 Resilience calculator
 ====================
 
-This program is intended to run the resilience indicator and draw most 
-of the figures used in "Countries’ Socio-Economic Resilience to 
-Natural Disasters" by Stephane Hallegatte, Mook Bangalore, and Adrien 
-Vogt-Schilb. 
+This program is intended to run the resilience indicator and draw most of the figures used in "Countries’ Socio-Economic Resilience to Natural Disasters" by Stephane Hallegatte, Mook Bangalore, and Adrien Vogt-Schilb. 
 It comes with no warranty at all. 
 
 
 Basic instructions: 
 
-First all, you need a copy of ipython (find instructions for this part 
-online). You have to know that I use python 3. The code won't run under 
-python 2 without adjustments. 
+First all, you need a copy of ipython (find instructions for this part online). You have to know that I use python 3. The code won't run under python 2 without adjustments. 
+To reproduce the figures in the paper :
 
-To reproduce the figures in the paper 
-
-1. download_wb_data.ipynb gets data from ASPIRE, WDI and FINDEX. 
-2. comptue_res_ind.ipynb compiles the data, uses it to compute the 
-resilience indicator, and saves the results. All the equations are in another file, 
-res_ind_lib.py. 
+* 1- download_wb_data.ipynb gets data from ASPIRE, WDI and FINDEX. 
+* 2- comptue_res_ind.ipynb compiles the data, uses it to compute the resilience indicator, and saves the results. All the equations are in another file, res_ind_lib.py. 
 
 After that, you can use:
 
-3. draw maps.ipynb to draw the maps.
-4. draw_plots.ipynb to draw... the plots. 
+* 3- draw maps.ipynb to draw the maps.
+* 4- draw_plots.ipynb to draw... the plots. 
 
 Drawing the scorecards requires 2 steps (also after steps 1 and 2): 
 
-5. run compute_scorecards.ipynb. This basically computes the derivative of risk and resilience wrt all the inputs.
-6. run render_scorecards.ipynb. This does the actual drawing of the scorecards. 
+* 5- run compute_scorecards.ipynb. This basically computes the derivative of risk and resilience wrt all the inputs.
+* 6- run render_scorecards.ipynb. This does the actual drawing of the scorecards. 
 This script will also attempt to convert all the scorecards from eps to png and to a single pdf. It uses ImageMagick and ghostscript (find them online).
 
 
