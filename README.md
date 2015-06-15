@@ -21,11 +21,13 @@ To reproduce the figures in the paper
 resilience indicator, and saves the results. All the equations are in another file, 
 res_ind_lib.py. 
 
-After that, you can use: 
+After that, you can use:
+
 3. draw maps.ipynb to draw the maps.
 4. draw_plots.ipynb to draw... the plots. 
 
 Drawing the scorecards requires 2 steps (also after steps 1 and 2): 
+
 5. run compute_scorecards.ipynb. This basically computes the derivative of risk and resilience wrt all the inputs.
 6. run render_scorecards.ipynb. This does the actual drawing of the scorecards. 
 This script will also attempt to convert all the scorecards from eps to png and to a single pdf. It uses ImageMagick and ghostscript (find them online).
