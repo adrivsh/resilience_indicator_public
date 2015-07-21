@@ -55,8 +55,10 @@ Colombia,CO,COL,170
 Comoros,KM,COM,174
 Congo (Brazzaville),CG,COG,178
 Congo,CG,COG,178
+Republic of the Congo,CG,COG,178
+"Congo, Rep.",CG,COG,178
 "Congo, Democratic Republic of the",CD,COD,180
-Republic of the Congo,CD,COD,180
+"Congo, Dem. Rep.",CD,COD,180
 Cook Islands ,CK,COK,184
 Cook Islands,CK,COK,184
 Costa Rica,CR,CRI,188
@@ -73,6 +75,7 @@ Dominica,DM,DMA,212
 Dominican Republic,DO,DOM,214
 Ecuador,EC,ECU,218
 Egypt,EG,EGY,818
+"Egypt, Arab Rep.",EG,EGY,818
 El Salvador,SV,SLV,222
 Equatorial Guinea,GQ,GNQ,226
 Eritrea,ER,ERI,232
@@ -130,6 +133,7 @@ Kiribati,KI,KIR,296
 South Korea,KR,KOR,410
 Kuwait,KW,KWT,414
 Kyrgyzstan,KG,KGZ,417
+"Kyrgyz Republic",KG,KGZ,417
 Lao PDR,LA,LAO,418
 Latvia,LV,LVA,428
 Lebanon,LB,LBN,422
@@ -219,6 +223,7 @@ Seychelles,SC,SYC,690
 Sierra Leone,SL,SLE,694
 Singapore,SG,SGP,702
 Slovakia,SK,SVK,703
+"Slovak Republic",SK,SVK,703
 Slovenia,SI,SVN,705
 Solomon Islands,SB,SLB,90
 Somalia,SO,SOM,706
@@ -234,6 +239,7 @@ Swaziland,SZ,SWZ,748
 Sweden,SE,SWE,752
 Switzerland,CH,CHE,756
 Syrian Arab Republic (Syria),SY,SYR,760
+Syrian Arab Republic,SY,SYR,760
 "Taiwan, Republic of China",TW,TWN,158
 Taiwan,TW,TWN,158
 Tajikistan,TJ,TJK,762
@@ -270,5 +276,6 @@ Vietnam,VN,VNM,704
 Wallis and Futuna Islands,WF,WLF,876
 Western Sahara,EH,ESH,732
 Yemen,YE,YEM,887
+"Yemen, Rep.",YE,YEM,887
 Zambia,ZM,ZMB,894
 Zimbabwe,ZW,ZWE,716

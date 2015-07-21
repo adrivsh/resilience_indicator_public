@@ -47,3 +47,11 @@ axfin_r,Access to finance for non-poor people,0.8,,,percent,0.2
 axhealth,Access to health care,1,,,percent,0.2
 resilience,Resilience,1,,,percent,0.3
 risk,Risk to welfare,,,,risk,0.3
+fa_ratio_10,,,,,,
+fa_ratio_100,,,,,,
+fa_ratio_1000,,,,,,
+fa_ratio_25,,,,,,
+fa_ratio_250,,,,,,
+fa_ratio_5,,,,,,
+fa_ratio_50,,,,,,
+fa_ratio_500,,,,,,
