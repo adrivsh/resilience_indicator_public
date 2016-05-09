@@ -1,2 +1,2 @@
-start explorer res_ind_lib.py
+REM start explorer res_ind_lib.py
 ipython notebook

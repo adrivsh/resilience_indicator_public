@@ -1,8 +1,9 @@
 import matplotlib.pyplot as plt
 import pandas as pd
+import numpy as np
 
 def fancy_barh(data,formater = lambda x:"{:2.1f}".format(100*x)):
-    plt.figure(figsize=(9,25))
+
 
     pos = range(len(data.index))    
     
@@ -24,14 +25,16 @@ def fancy_barh(data,formater = lambda x:"{:2.1f}".format(100*x)):
 
     #frame
     plt.ylim(ymin=-0.5,ymax = max(pos)+4 if has_legend else  max(pos)+1); #room for legend
-    plt.xlim(xmin=0)
+    
+    if data.min().min() >=0:
+        plt.xlim(xmin=0)
     
     ax=plt.gca()
     #remove spines
     ax.spines['bottom'].set_color("none")
     ax.spines['right'].set_color('none')
     ax.spines['top'].set_color('none')
-    ax.spines['right'].set_color('none')
+    ax.spines['left'].set_color('none')
 
     #removes xticks
     for tic in ax.yaxis.get_major_ticks()+ax.xaxis.get_major_ticks():

@@ -67,3 +67,7 @@ def make_legend(serie,label,path):
     cb.set_label(label,size=20)
 
     plt.savefig(path,bbox_inches="tight",transparent=True)    
+    
+    
+    
+    

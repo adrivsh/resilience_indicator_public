@@ -3,5 +3,5 @@ from IPython.display import clear_output
 def progress_reporter(c):
     #report progress
     clear_output()
-    print(c)
+    print("working on ",c)
     sys.stdout.flush()    
