@@ -1,0 +1,10 @@
+place,gdp_pc_pp,pop,share1,shew,plgp,unemp,axfin_p,axfin_r,axhealth,social_p,social_r,iso3,pov_head,avg_prod_k,fa,pe,H,alpha,T_rebuild_K,T_rebuild_L,pi,income_elast,v,pv,sigma_p,sigma_r,share_nat_income
+Mumbai,29380.32,18400000,0.1014,0.07,0.6137311,0.06,0.34,0.33,0.875,0.1,0.1,MUM,0.25,0.3065,0.228,0.71,0.68,1,1.5,40,0.2,1.5,0.1,0.319913199,0.118,0.096,0.25
+fa_.95,,,,,,,,,,,,,,,0.2166,,,,,,,,,,,,
+v_.95,,,,,,,,,,,,,,,,,,,,,,,0.095,,,,
+double_sigma,,,,,,,,,,,,,,,,,,,,,,,,,0.236,0.192,
+rebuild_one_third,,,,,,,,,,,,,,,,,,,1,,,,,,,,
+double_social,,,,,,,,,,0.2,0.2,,,,,,,,,,,,,,,,
+halve_pv,,,,,,,,,,,,,,,,,,,,,,,,0.1599566,,,
+double_banks,,,,,,,0.68,0.66,,,,,,,,,,,,,,,,,,,
+share1_ten_percent,,,0.11154,,,,,,,,,,,,,,,,,,,,,,,,

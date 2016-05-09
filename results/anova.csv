@@ -1,0 +1,6 @@
+desc,sum_sq_pc
+np.log(v_shew),0.3868976123113559
+np.log(protection),0.3277001913598567
+np.log(fa / avg_prod_k),0.2688206264781374
+np.log(resilience),0.015708127229167753
+Residual,0.0008734426214822411
